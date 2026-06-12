@@ -20,7 +20,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-// Product Data with PKR Prices
+// Product Data with LOCAL base64 placeholder images (no external URLs)
 const products = [
   {
     id: 1,
@@ -28,8 +28,6 @@ const products = [
     category: "wallet",
     price: 2999,
     icon: Wallet,
-    image:
-      "https://images.pexels.com/photos/2079438/pexels-photo-2079438.jpeg?w=300",
     description: "Genuine leather wallet with 6 card slots",
     rating: 4.5,
     badge: "Bestseller",
@@ -40,8 +38,6 @@ const products = [
     category: "perfume",
     price: 4999,
     icon: Wind,
-    image:
-      "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?w=300",
     description: "Long lasting oriental fragrance",
     rating: 4.8,
     badge: "Premium",
@@ -52,8 +48,6 @@ const products = [
     category: "watch",
     price: 8999,
     icon: Watch,
-    image:
-      "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?w=300",
     description: "Water resistant chronograph watch",
     rating: 4.6,
     badge: "Trending",
@@ -64,8 +58,6 @@ const products = [
     category: "spray",
     price: 1999,
     icon: SprayCan,
-    image:
-      "https://images.pexels.com/photos/3962292/pexels-photo-3962292.jpeg?w=300",
     description: "Fresh and energetic body spray",
     rating: 4.3,
     badge: "Popular",
@@ -76,8 +68,6 @@ const products = [
     category: "airbuds",
     price: 5999,
     icon: Headphones,
-    image:
-      "https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?w=300",
     description: "Bluetooth 5.3 with charging case",
     rating: 4.7,
     badge: "New",
@@ -88,8 +78,6 @@ const products = [
     category: "glasses",
     price: 3499,
     icon: Glasses,
-    image:
-      "https://images.pexels.com/photos/2583846/pexels-photo-2583846.jpeg?w=300",
     description: "UV protection polarized lenses",
     rating: 4.4,
     badge: "Sale",
@@ -100,8 +88,6 @@ const products = [
     category: "wallet",
     price: 2499,
     icon: Wallet,
-    image:
-      "https://images.pexels.com/photos/1157329/pexels-photo-1157329.jpeg?w=300",
     description: "Slim RFID blocking wallet",
     rating: 4.5,
     badge: "",
@@ -112,8 +98,6 @@ const products = [
     category: "perfume",
     price: 5999,
     icon: Wind,
-    image:
-      "https://images.pexels.com/photos/3997427/pexels-photo-3997427.jpeg?w=300",
     description: "Rich amber and musk fragrance",
     rating: 4.9,
     badge: "Luxury",
@@ -124,8 +108,6 @@ const products = [
     category: "watch",
     price: 11999,
     icon: Watch,
-    image:
-      "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?w=300",
     description: "Fitness tracker with heart rate monitor",
     rating: 4.8,
     badge: "Featured",
@@ -136,8 +118,6 @@ const products = [
     category: "spray",
     price: 1799,
     icon: SprayCan,
-    image:
-      "https://images.pexels.com/photos/5591384/pexels-photo-5591384.jpeg?w=300",
     description: "Energizing citrus body mist",
     rating: 4.2,
     badge: "",
@@ -148,8 +128,6 @@ const products = [
     category: "airbuds",
     price: 8999,
     icon: Headphones,
-    image:
-      "https://images.pexels.com/photos/3394659/pexels-photo-3394659.jpeg?w=300",
     description: "Active noise cancellation",
     rating: 4.9,
     badge: "Limited",
@@ -160,13 +138,29 @@ const products = [
     category: "glasses",
     price: 4499,
     icon: Glasses,
-    image:
-      "https://images.pexels.com/photos/2414617/pexels-photo-2414617.jpeg?w=300",
     description: "Classic aviator style sunglasses",
     rating: 4.6,
     badge: "",
   },
 ];
+
+// SVG Placeholder Images (no external URLs)
+const getProductImage = (productName, category) => {
+  // Color schemes for different categories
+  const colors = {
+    wallet: { bg: "from-amber-500 to-orange-600", icon: "💰" },
+    perfume: { bg: "from-purple-500 to-pink-600", icon: "🌸" },
+    watch: { bg: "from-blue-500 to-cyan-600", icon: "⌚" },
+    spray: { bg: "from-green-500 to-emerald-600", icon: "🌊" },
+    airbuds: { bg: "from-indigo-500 to-purple-600", icon: "🎧" },
+    glasses: { bg: "from-red-500 to-pink-600", icon: "👓" },
+  };
+
+  const color = colors[category] || colors.wallet;
+
+  // Return inline SVG as data URL
+  return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23${color.bg.split(" ")[1].replace("to-", "").replace("600", "500")}'/%3E%3Cstop offset='100%25' style='stop-color:%23${color.bg.split(" ")[2].replace("to-", "").replace("600", "500")}'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='300' height='200' fill='url(%23grad)'/%3E%3Ctext x='150' y='90' font-size='48' text-anchor='middle' fill='white' opacity='0.8'%3E${color.icon}%3C/text%3E%3Ctext x='150' y='130' font-size='14' text-anchor='middle' fill='white' opacity='0.7'%3E${productName.split(" ").slice(0, 2).join(" ")}%3C/text%3E%3C/svg%3E`;
+};
 
 const categories = [
   {
@@ -214,6 +208,53 @@ const categories = [
 ];
 
 const WHATSAPP_NUMBER = "923157661566";
+
+// Product Image Component with no external URLs
+const ProductImage = ({ product }) => {
+  const [imageError, setImageError] = useState(false);
+
+  if (imageError) {
+    return (
+      <div
+        className={`w-full h-full bg-gradient-to-br ${
+          product.category === "wallet"
+            ? "from-amber-500 to-orange-600"
+            : product.category === "perfume"
+              ? "from-purple-500 to-pink-600"
+              : product.category === "watch"
+                ? "from-blue-500 to-cyan-600"
+                : product.category === "spray"
+                  ? "from-green-500 to-emerald-600"
+                  : product.category === "airbuds"
+                    ? "from-indigo-500 to-purple-600"
+                    : "from-red-500 to-pink-600"
+        } flex items-center justify-center`}
+      >
+        <div className="text-center text-white p-4">
+          <div className="text-6xl mb-3">
+            {product.category === "wallet" && "👛"}
+            {product.category === "perfume" && "🌸"}
+            {product.category === "watch" && "⌚"}
+            {product.category === "spray" && "🌊"}
+            {product.category === "airbuds" && "🎧"}
+            {product.category === "glasses" && "👓"}
+          </div>
+          <p className="text-sm font-semibold">{product.name}</p>
+          <p className="text-xs opacity-75 mt-1">Premium Quality</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={getProductImage(product.name, product.category)}
+      alt={product.name}
+      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      onError={() => setImageError(true)}
+    />
+  );
+};
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -295,7 +336,7 @@ function App() {
       )
       .join("\n");
 
-    const message = `🛍️ *NEW ORDER - Elite Mart* 🛍️\n\n━━━━━━━━━━━━━━━━━━━━\n*👤 CUSTOMER DETAILS*\n━━━━━━━━━━━━━━━━━━━━\nName: ${customerInfo.name}\nPhone: ${customerInfo.phone}\nAddress: ${customerInfo.address}\n\n━━━━━━━━━━━━━━━━━━━━\n*📦 ORDER ITEMS*\n━━━━━━━━━━━━━━━━━━━━\n${itemsList}\n\n━━━━━━━━━━━━━━━━━━━━\n*💰 TOTAL AMOUNT*\n${formatPrice(getCartTotal())}\n━━━━━━━━━━━━━━━━━━━━\n\nThank you for shopping with Elite Mart! 🎉\nYour order will be processed shortly.`;
+    const message = `🛍️ *NEW ORDER - Elite Mart* 🛍️\n\n━━━━━━━━━━━━━━━━━━━━\n*👤 CUSTOMER DETAILS*\n━━━━━━━━━━━━━━━━━━━━\nName: ${customerInfo.name}\nPhone: ${customerInfo.phone}\nAddress: ${customerInfo.address}\n\n━━━━━━━━━━━━━━━━━━━━\n*📦 ORDER ITEMS*\n━━━━━━━━━━━━━━━━━━━━\n${itemsList}\n\n━━━━━━━━━━━━━━━━━━━━\n*💰 TOTAL AMOUNT*\n${formatPrice(getCartTotal())}\n━━━━━━━━━━━━━━━━━━━━\n\nThank you for shopping with Elite Mart! 🎉`;
 
     return encodeURIComponent(message);
   };
@@ -317,14 +358,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
-      {/* Hero Section with Floating Elements */}
+      {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-purple-700 via-pink-600 to-orange-500 text-white">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full filter blur-3xl animate-pulse"></div>
           <div className="absolute bottom-10 right-10 w-96 h-96 bg-yellow-300 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
         </div>
 
-        {/* Header */}
         <div className="relative z-10">
           <div className="container mx-auto px-4 py-4 flex justify-between items-center">
             <div className="flex items-center gap-3">
@@ -351,7 +391,6 @@ function App() {
             </button>
           </div>
 
-          {/* Hero Text */}
           <div className="text-center py-12 px-4">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur rounded-full px-4 py-1 mb-4">
               <Sparkles className="w-4 h-4" />
@@ -383,7 +422,7 @@ function App() {
         </div>
       </div>
 
-      {/* Categories - Modern Glassmorphism */}
+      {/* Categories */}
       <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-lg shadow-lg">
         <div className="container mx-auto px-4 py-4 overflow-x-auto">
           <div className="flex gap-3 min-w-max">
@@ -401,9 +440,6 @@ function App() {
                   className={`w-4 h-4 transition-transform group-hover:scale-110 ${selectedCategory === cat.id ? "animate-pulse" : ""}`}
                 />
                 <span className="font-medium">{cat.name}</span>
-                {selectedCategory === cat.id && (
-                  <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-8 h-1 bg-white rounded-full"></div>
-                )}
               </button>
             ))}
           </div>
@@ -434,7 +470,6 @@ function App() {
               key={product.id}
               className="group relative bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
-              {/* Badge */}
               {product.badge && (
                 <div className="absolute top-4 left-4 z-10">
                   <span
@@ -458,7 +493,6 @@ function App() {
                 </div>
               )}
 
-              {/* Wishlist Button */}
               <button
                 onClick={() => toggleWishlist(product.id)}
                 className="absolute top-4 right-4 z-10 bg-white/90 backdrop-blur rounded-full p-2 hover:bg-white transition-all"
@@ -468,18 +502,8 @@ function App() {
                 />
               </button>
 
-              {/* Product Image */}
               <div className="relative overflow-hidden h-64 bg-gradient-to-br from-gray-100 to-gray-200">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  onError={(e) =>
-                    (e.target.src =
-                      "https://via.placeholder.com/300x200?text=Product")
-                  }
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <ProductImage product={product} />
               </div>
 
               <div className="p-5">
@@ -523,7 +547,7 @@ function App() {
         </div>
       </main>
 
-      {/* Cart Sidebar - Modern Design */}
+      {/* Cart Sidebar */}
       {isCartOpen && (
         <div className="fixed inset-0 z-50 overflow-hidden">
           <div
@@ -564,11 +588,16 @@ function App() {
                         key={item.id}
                         className="flex gap-4 bg-gray-50 rounded-xl p-3 transition hover:shadow-md"
                       >
-                        <img
-                          src={item.image}
-                          alt={item.name}
-                          className="w-20 h-20 object-cover rounded-lg"
-                        />
+                        <div className="w-20 h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center">
+                          <span className="text-2xl">
+                            {item.category === "wallet" && "👛"}
+                            {item.category === "perfume" && "🌸"}
+                            {item.category === "watch" && "⌚"}
+                            {item.category === "spray" && "🌊"}
+                            {item.category === "airbuds" && "🎧"}
+                            {item.category === "glasses" && "👓"}
+                          </span>
+                        </div>
                         <div className="flex-1">
                           <h4 className="font-semibold text-gray-800">
                             {item.name}
@@ -642,10 +671,10 @@ function App() {
         </div>
       )}
 
-      {/* Order Form Modal - Modern Glassmorphism */}
+      {/* Order Form Modal */}
       {showOrderForm && (
         <div className="fixed inset-0 z-50 overflow-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full p-6 transform transition-all duration-300 shadow-2xl animate-fadeInUp">
+          <div className="bg-white rounded-2xl max-w-md w-full p-6 transform transition-all duration-300 shadow-2xl">
             <div className="flex justify-between items-center mb-5">
               <div>
                 <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
@@ -773,28 +802,25 @@ function App() {
         </div>
       </footer>
 
-      {/* Add animation keyframes to your CSS */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+          .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
           }
-          to {
-            opacity: 1;
-            transform: translateY(0);
+          @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
           }
-        }
-        .animate-fadeInUp {
-          animation: fadeInUp 0.3s ease-out;
-        }
-        .line-clamp-2 {
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-        }
-      `}</style>
+          .animate-bounce {
+            animation: bounce 0.5s infinite;
+          }
+        `,
+        }}
+      />
     </div>
   );
 }
