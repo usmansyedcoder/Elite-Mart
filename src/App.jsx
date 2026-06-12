@@ -28,7 +28,8 @@ const products = [
     category: "wallet",
     price: 2999,
     icon: Wallet,
-    image: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=300",
+    image:
+      "https://images.pexels.com/photos/2079438/pexels-photo-2079438.jpeg?w=300",
     description: "Genuine leather wallet with 6 card slots",
     rating: 4.5,
     badge: "Bestseller",
@@ -39,7 +40,8 @@ const products = [
     category: "perfume",
     price: 4999,
     icon: Wind,
-    image: "https://images.unsplash.com/photo-1594035910387-fea47794261f?w=300",
+    image:
+      "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?w=300",
     description: "Long lasting oriental fragrance",
     rating: 4.8,
     badge: "Premium",
@@ -50,7 +52,8 @@ const products = [
     category: "watch",
     price: 8999,
     icon: Watch,
-    image: "https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=300",
+    image:
+      "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?w=300",
     description: "Water resistant chronograph watch",
     rating: 4.6,
     badge: "Trending",
@@ -61,7 +64,8 @@ const products = [
     category: "spray",
     price: 1999,
     icon: SprayCan,
-    image: "https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=300",
+    image:
+      "https://images.pexels.com/photos/3962292/pexels-photo-3962292.jpeg?w=300",
     description: "Fresh and energetic body spray",
     rating: 4.3,
     badge: "Popular",
@@ -72,7 +76,8 @@ const products = [
     category: "airbuds",
     price: 5999,
     icon: Headphones,
-    image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=300",
+    image:
+      "https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?w=300",
     description: "Bluetooth 5.3 with charging case",
     rating: 4.7,
     badge: "New",
@@ -83,7 +88,8 @@ const products = [
     category: "glasses",
     price: 3499,
     icon: Glasses,
-    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=300",
+    image:
+      "https://images.pexels.com/photos/2583846/pexels-photo-2583846.jpeg?w=300",
     description: "UV protection polarized lenses",
     rating: 4.4,
     badge: "Sale",
@@ -94,7 +100,8 @@ const products = [
     category: "wallet",
     price: 2499,
     icon: Wallet,
-    image: "https://images.unsplash.com/photo-1606503825008-909a67e63c3d?w=300",
+    image:
+      "https://images.pexels.com/photos/1157329/pexels-photo-1157329.jpeg?w=300",
     description: "Slim RFID blocking wallet",
     rating: 4.5,
     badge: "",
@@ -105,7 +112,8 @@ const products = [
     category: "perfume",
     price: 5999,
     icon: Wind,
-    image: "https://images.unsplash.com/photo-1588392382834-a891154bca4d?w=300",
+    image:
+      "https://images.pexels.com/photos/3997427/pexels-photo-3997427.jpeg?w=300",
     description: "Rich amber and musk fragrance",
     rating: 4.9,
     badge: "Luxury",
@@ -116,7 +124,8 @@ const products = [
     category: "watch",
     price: 11999,
     icon: Watch,
-    image: "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=300",
+    image:
+      "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?w=300",
     description: "Fitness tracker with heart rate monitor",
     rating: 4.8,
     badge: "Featured",
@@ -127,7 +136,8 @@ const products = [
     category: "spray",
     price: 1799,
     icon: SprayCan,
-    image: "https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=300",
+    image:
+      "https://images.pexels.com/photos/5591384/pexels-photo-5591384.jpeg?w=300",
     description: "Energizing citrus body mist",
     rating: 4.2,
     badge: "",
@@ -138,7 +148,8 @@ const products = [
     category: "airbuds",
     price: 8999,
     icon: Headphones,
-    image: "https://images.unsplash.com/photo-1606220588913-b3aac6ab96f1?w=300",
+    image:
+      "https://images.pexels.com/photos/3394659/pexels-photo-3394659.jpeg?w=300",
     description: "Active noise cancellation",
     rating: 4.9,
     badge: "Limited",
@@ -149,7 +160,8 @@ const products = [
     category: "glasses",
     price: 4499,
     icon: Glasses,
-    image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=300",
+    image:
+      "https://images.pexels.com/photos/2414617/pexels-photo-2414617.jpeg?w=300",
     description: "Classic aviator style sunglasses",
     rating: 4.6,
     badge: "",
