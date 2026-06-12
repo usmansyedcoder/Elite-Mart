@@ -31,6 +31,8 @@ const products = [
     rating: 5,
     badge: "Bestseller",
     emoji: "👛",
+    image:
+      "https://images.pexels.com/photos/2079438/pexels-photo-2079438.jpeg?w=400&h=300&fit=crop",
   },
   {
     id: 2,
@@ -41,6 +43,8 @@ const products = [
     rating: 5,
     badge: "Premium",
     emoji: "🌸",
+    image:
+      "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?w=400&h=300&fit=crop",
   },
   {
     id: 3,
@@ -51,6 +55,8 @@ const products = [
     rating: 5,
     badge: "Trending",
     emoji: "⌚",
+    image:
+      "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?w=400&h=300&fit=crop",
   },
   {
     id: 4,
@@ -61,6 +67,8 @@ const products = [
     rating: 4,
     badge: "Popular",
     emoji: "🌊",
+    image:
+      "https://images.pexels.com/photos/3962292/pexels-photo-3962292.jpeg?w=400&h=300&fit=crop",
   },
   {
     id: 5,
@@ -71,6 +79,8 @@ const products = [
     rating: 5,
     badge: "New",
     emoji: "🎧",
+    image:
+      "https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?w=400&h=300&fit=crop",
   },
   {
     id: 6,
@@ -81,6 +91,8 @@ const products = [
     rating: 4,
     badge: "Sale",
     emoji: "👓",
+    image:
+      "https://images.pexels.com/photos/2583846/pexels-photo-2583846.jpeg?w=400&h=300&fit=crop",
   },
   {
     id: 7,
@@ -91,6 +103,8 @@ const products = [
     rating: 4,
     badge: "",
     emoji: "👛",
+    image:
+      "https://images.pexels.com/photos/1157329/pexels-photo-1157329.jpeg?w=400&h=300&fit=crop",
   },
   {
     id: 8,
@@ -101,6 +115,8 @@ const products = [
     rating: 5,
     badge: "Luxury",
     emoji: "🌸",
+    image:
+      "https://images.pexels.com/photos/3997427/pexels-photo-3997427.jpeg?w=400&h=300&fit=crop",
   },
   {
     id: 9,
@@ -111,6 +127,8 @@ const products = [
     rating: 5,
     badge: "Featured",
     emoji: "⌚",
+    image:
+      "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?w=400&h=300&fit=crop",
   },
   {
     id: 10,
@@ -121,6 +139,8 @@ const products = [
     rating: 4,
     badge: "",
     emoji: "🌊",
+    image:
+      "https://images.pexels.com/photos/5591384/pexels-photo-5591384.jpeg?w=400&h=300&fit=crop",
   },
   {
     id: 11,
@@ -131,6 +151,8 @@ const products = [
     rating: 5,
     badge: "Limited",
     emoji: "🎧",
+    image:
+      "https://images.pexels.com/photos/3394659/pexels-photo-3394659.jpeg?w=400&h=300&fit=crop",
   },
   {
     id: 12,
@@ -141,6 +163,8 @@ const products = [
     rating: 4,
     badge: "",
     emoji: "👓",
+    image:
+      "https://images.pexels.com/photos/2414617/pexels-photo-2414617.jpeg?w=400&h=300&fit=crop",
   },
 ];
 
