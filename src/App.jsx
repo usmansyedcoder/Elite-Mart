@@ -20,7 +20,7 @@ import {
   Sparkles,
 } from "lucide-react";
 
-// Product Data - Simple and Clean
+// Product Data with Images
 const products = [
   {
     id: 1,
@@ -215,7 +215,7 @@ const categories = [
 
 const WHATSAPP_NUMBER = "923157661566";
 
-// Simple color mapping for product cards
+// Color mapping for product cards
 const getCategoryColor = (category) => {
   const colors = {
     wallet: "from-amber-400 to-orange-500",
@@ -226,6 +226,34 @@ const getCategoryColor = (category) => {
     glasses: "from-red-400 to-pink-500",
   };
   return colors[category] || "from-gray-400 to-gray-500";
+};
+
+// Product Image Component with fallback
+const ProductImage = ({ product }) => {
+  const [imgError, setImgError] = useState(false);
+
+  if (imgError) {
+    return (
+      <div
+        className={`w-full h-full bg-gradient-to-br ${getCategoryColor(product.category)} flex items-center justify-center`}
+      >
+        <div className="text-center text-white">
+          <div className="text-7xl mb-2">{product.emoji}</div>
+          <p className="text-sm font-semibold">{product.name}</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={product.image}
+      alt={product.name}
+      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+      onError={() => setImgError(true)}
+      loading="lazy"
+    />
+  );
 };
 
 function App() {
@@ -464,13 +492,9 @@ function App() {
                 />
               </button>
 
-              {/* Product Image / Emoji Display */}
-              <div
-                className={`relative overflow-hidden h-64 bg-gradient-to-br ${getCategoryColor(product.category)} flex items-center justify-center`}
-              >
-                <div className="text-8xl transform transition-transform duration-500 group-hover:scale-110">
-                  {product.emoji}
-                </div>
+              {/* Product Image - NOW SHOWING ACTUAL IMAGES */}
+              <div className="relative overflow-hidden h-64 bg-gray-200">
+                <ProductImage product={product} />
               </div>
 
               <div className="p-5">
@@ -548,10 +572,16 @@ function App() {
                         key={item.id}
                         className="flex gap-4 bg-gray-50 rounded-xl p-3"
                       >
-                        <div
-                          className={`w-20 h-20 bg-gradient-to-br ${getCategoryColor(item.category)} rounded-lg flex items-center justify-center text-3xl`}
-                        >
-                          {item.emoji}
+                        <div className="w-20 h-20 bg-gray-200 rounded-lg overflow-hidden">
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              e.target.onerror = null;
+                              e.target.parentElement.innerHTML = `<div class="w-full h-full bg-gradient-to-br ${getCategoryColor(item.category)} flex items-center justify-center text-2xl">${item.emoji}</div>`;
+                            }}
+                          />
                         </div>
                         <div className="flex-1">
                           <h4 className="font-semibold text-gray-800">
