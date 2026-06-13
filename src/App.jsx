@@ -130,7 +130,7 @@ const categories = [
   },
 ];
 
-const WHATSAPP_NUMBER = "923157661566";
+const WHATSAPP_NUMBER = "92315766156";
 
 // Color mapping for product cards
 const getCategoryColor = (category) => {
