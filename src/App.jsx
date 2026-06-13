@@ -182,7 +182,7 @@ function App() {
   const [customerInfo, setCustomerInfo] = useState({
     name: "",
     address: "",
-    phone: "923157666156",
+    phone: "",
   });
 
   const filteredProducts =
