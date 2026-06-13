@@ -83,39 +83,6 @@ const products = [
       "https://images.pexels.com/photos/3394659/pexels-photo-3394659.jpeg?w=400&h=300&fit=crop",
   },
   // NEW PRODUCTS ADDED BELOW
-  {
-    id: 6,
-    name: "For Him J. Oud Perfume",
-    category: "perfume",
-    price: 4999,
-    description: "Premium oud fragrance body spray for men",
-    rating: 5,
-    badge: "New",
-    emoji: "🌸",
-    image: "c25a2ac9-e8e3-460f-9825-d0267179cd64.jpg", // FORHIM OUD image
-  },
-  {
-    id: 7,
-    name: "HotIce Reflect Pour Homme",
-    category: "spray",
-    price: 1999,
-    description: "Refreshing body spray for men",
-    rating: 4,
-    badge: "Popular",
-    emoji: "🌊",
-    image: "3109a2e6-8ad8-4db2-9d98-472c6ff734ae.jpg", // HotIce REFLECT image
-  },
-  {
-    id: 8,
-    name: "Interlink Int Earbuds One",
-    category: "airbuds",
-    price: 5999,
-    description: "Stay connected, stay wireless",
-    rating: 5,
-    badge: "New",
-    emoji: "🎧",
-    image: "4c4f5efa-e0ec-4187-bcd2-b9ea4b62fd51.jpg", // Interlink earbuds image
-  },
 ];
 
 const categories = [
