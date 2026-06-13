@@ -24,18 +24,6 @@ import {
 const products = [
   {
     id: 1,
-    name: "Premium Leather Wallet",
-    category: "wallet",
-    price: 2999,
-    description: "Genuine leather wallet with 6 card slots",
-    rating: 5,
-    badge: "Bestseller",
-    emoji: "👛",
-    image:
-      "https://images.pexels.com/photos/2079438/pexels-photo-2079438.jpeg?w=400&h=300&fit=crop",
-  },
-  {
-    id: 2,
     name: "Midnight Oud Perfume",
     category: "perfume",
     price: 4999,
@@ -47,7 +35,7 @@ const products = [
       "https://images.pexels.com/photos/965989/pexels-photo-965989.jpeg?w=400&h=300&fit=crop",
   },
   {
-    id: 3,
+    id: 2,
     name: "Chrono Sports Watch",
     category: "watch",
     price: 8999,
@@ -59,19 +47,7 @@ const products = [
       "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?w=400&h=300&fit=crop",
   },
   {
-    id: 4,
-    name: "Ocean Breeze Body Spray",
-    category: "spray",
-    price: 1999,
-    description: "Fresh and energetic body spray",
-    rating: 4,
-    badge: "Popular",
-    emoji: "🌊",
-    image:
-      "https://images.pexels.com/photos/3962292/pexels-photo-3962292.jpeg?w=400&h=300&fit=crop",
-  },
-  {
-    id: 5,
+    id: 3,
     name: "Bass+ Wireless Airbuds",
     category: "airbuds",
     price: 5999,
@@ -83,43 +59,7 @@ const products = [
       "https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?w=400&h=300&fit=crop",
   },
   {
-    id: 6,
-    name: "Retro Round Sunglasses",
-    category: "glasses",
-    price: 3499,
-    description: "UV protection polarized lenses",
-    rating: 4,
-    badge: "Sale",
-    emoji: "👓",
-    image:
-      "https://images.pexels.com/photos/2583846/pexels-photo-2583846.jpeg?w=400&h=300&fit=crop",
-  },
-  {
-    id: 7,
-    name: "Minimalist Card Wallet",
-    category: "wallet",
-    price: 2499,
-    description: "Slim RFID blocking wallet",
-    rating: 4,
-    badge: "",
-    emoji: "👛",
-    image:
-      "https://images.pexels.com/photos/1157329/pexels-photo-1157329.jpeg?w=400&h=300&fit=crop",
-  },
-  {
-    id: 8,
-    name: "Royal Amber Perfume",
-    category: "perfume",
-    price: 5999,
-    description: "Rich amber and musk fragrance",
-    rating: 5,
-    badge: "Luxury",
-    emoji: "🌸",
-    image:
-      "https://images.pexels.com/photos/3997427/pexels-photo-3997427.jpeg?w=400&h=300&fit=crop",
-  },
-  {
-    id: 9,
+    id: 4,
     name: "Smart Digital Watch",
     category: "watch",
     price: 11999,
@@ -131,19 +71,7 @@ const products = [
       "https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?w=400&h=300&fit=crop",
   },
   {
-    id: 10,
-    name: "Citrus Splash Spray",
-    category: "spray",
-    price: 1799,
-    description: "Energizing citrus body mist",
-    rating: 4,
-    badge: "",
-    emoji: "🌊",
-    image:
-      "https://images.pexels.com/photos/5591384/pexels-photo-5591384.jpeg?w=400&h=300&fit=crop",
-  },
-  {
-    id: 11,
+    id: 5,
     name: "Pro Noise Cancelling Buds",
     category: "airbuds",
     price: 8999,
@@ -154,17 +82,39 @@ const products = [
     image:
       "https://images.pexels.com/photos/3394659/pexels-photo-3394659.jpeg?w=400&h=300&fit=crop",
   },
+  // NEW PRODUCTS ADDED BELOW
   {
-    id: 12,
-    name: "Aviator Metal Glasses",
-    category: "glasses",
-    price: 4499,
-    description: "Classic aviator style sunglasses",
+    id: 6,
+    name: "For Him J. Oud Perfume",
+    category: "perfume",
+    price: 4999,
+    description: "Premium oud fragrance body spray for men",
+    rating: 5,
+    badge: "New",
+    emoji: "🌸",
+    image: "c25a2ac9-e8e3-460f-9825-d0267179cd64.jpg", // FORHIM OUD image
+  },
+  {
+    id: 7,
+    name: "HotIce Reflect Pour Homme",
+    category: "spray",
+    price: 1999,
+    description: "Refreshing body spray for men",
     rating: 4,
-    badge: "",
-    emoji: "👓",
-    image:
-      "https://images.pexels.com/photos/2414617/pexels-photo-2414617.jpeg?w=400&h=300&fit=crop",
+    badge: "Popular",
+    emoji: "🌊",
+    image: "3109a2e6-8ad8-4db2-9d98-472c6ff734ae.jpg", // HotIce REFLECT image
+  },
+  {
+    id: 8,
+    name: "Interlink Int Earbuds One",
+    category: "airbuds",
+    price: 5999,
+    description: "Stay connected, stay wireless",
+    rating: 5,
+    badge: "New",
+    emoji: "🎧",
+    image: "4c4f5efa-e0ec-4187-bcd2-b9ea4b62fd51.jpg", // Interlink earbuds image
   },
 ];
 
@@ -265,7 +215,7 @@ function App() {
   const [customerInfo, setCustomerInfo] = useState({
     name: "",
     address: "",
-    phone: "03157666156",
+    phone: "923157666156",
   });
 
   const filteredProducts =
