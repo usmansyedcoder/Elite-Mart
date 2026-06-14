@@ -33,6 +33,17 @@ const products = [
     emoji: "🌸",
     image: "/perfume.jpeg",
   },
+{
+    id: 9,
+    name: "Digital Watch",
+    category: "watch",
+    price: 6999,
+    description: "Rich amber and vanilla fragrance blend",
+    rating: 5,
+    badge: "Premium",
+    emoji: "🌸",
+    image: "/watch.jpeg",
+  },
   {
     id: 7,
     name: "Hotlee",
