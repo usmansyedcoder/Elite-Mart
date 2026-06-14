@@ -82,6 +82,39 @@ const products = [
     image:
       "https://images.pexels.com/photos/3394659/pexels-photo-3394659.jpeg?w=400&h=300&fit=crop",
   },
+  {
+    id: 6,
+    name: "Janan Perfume Body Spray",
+    category: "perfume",
+    price: 6999,
+    description: "Rich amber and vanilla fragrance blend",
+    rating: 5,
+    badge: "Premium",
+    emoji: "🌸",
+    image: "/perfume.jpeg",
+  },
+  {
+    id: 7,
+    name: "Hotlee",
+    category: "watch",
+    price: 14999,
+    description: "Elegant titanium case with sapphire glass",
+    rating: 5,
+    badge: "Luxury",
+    emoji: "⌚",
+    image: "/perfume2.jpeg",
+  },
+  {
+    id: 8,
+    name: "Airbuds",
+    category: "airbuds",
+    price: 7499,
+    description: "Low latency gaming mode with RGB lights",
+    rating: 5,
+    badge: "New",
+    emoji: "🎧",
+    image: "airpods.jpeg",
+  },
   // NEW PRODUCTS ADDED BELOW
 ];
 
